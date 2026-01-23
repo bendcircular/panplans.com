@@ -1,0 +1,15 @@
+{
+  "brand": "Starter",
+  "language": {
+    "en": "English",
+    "de": "Deutsch",
+    "switchTo": "Switch language"
+  },
+  "footer": {
+    "title": "React Router v7",
+    "description": "A modern framework for building web applications.",
+    "github": "View on GitHub",
+    "copyright": "© 2025 React Router",
+    "builtWith": "Built with React Router v7, Radix UI Colors & Tailwind CSS"
+  }
+}

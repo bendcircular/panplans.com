@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Welcome to",
+    "titleAccent": "React Router v7",
+    "subtitle": "A clean starter template with theme support, internationalization, and Radix UI colors. Ready to build something amazing.",
+    "cta": {
+      "docs": "Read the Docs",
+      "github": "View Source"
+    },
+    "themeLabel": "Toggle theme:"
+  },
+  "features": {
+    "title": "Included",
+    "titleAccent": "Features",
+    "items": {
+      "routing": {
+        "title": "File-Based Routing",
+        "description": "React Router v7 with nested layouts, loaders, and actions. Type-safe routing out of the box."
+      },
+      "themes": {
+        "title": "Theme Support",
+        "description": "Light, dark, and system themes powered by next-themes. Radix UI color scales for consistent design."
+      },
+      "i18n": {
+        "title": "Internationalization",
+        "description": "Built-in i18n with react-i18next. Locale-prefixed routes and language switching ready to go."
+      }
+    }
+  }
+}
