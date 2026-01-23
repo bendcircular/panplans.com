@@ -11,11 +11,12 @@ type LocalizedLinkProps = Omit<LinkProps, "to"> & {
 export function LocalizedLink({ to, children, ...props }: LocalizedLinkProps) {
   const locale = useLocale();
 
-  // Don't localize external links or mailto/tel links
+  // Don't localize external links, mailto/tel links, or pure hash links
   if (
     to.startsWith("http") ||
     to.startsWith("mailto:") ||
-    to.startsWith("tel:")
+    to.startsWith("tel:") ||
+    to.startsWith("#")
   ) {
     return (
       <Link to={to} {...props}>

@@ -32,17 +32,25 @@ export function useAlternateLocale(): SupportedLanguage {
  * Utility to prefix a path with the current locale
  */
 export function localizedPath(locale: SupportedLanguage, path: string): string {
+  // Handle pure hash links (e.g., #about) - these stay as-is for same-page navigation
+  if (path.startsWith("#")) {
+    return path;
+  }
+
   // Remove leading slash if present
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-
-  // Handle hash links (e.g., #about)
-  if (cleanPath.startsWith("#")) {
-    return `/${locale}/${cleanPath}`;
-  }
 
   // Handle empty path (home)
   if (!cleanPath) {
     return `/${locale}/`;
+  }
+
+  // Handle paths with hash (e.g., /page#section)
+  const hashIndex = cleanPath.indexOf("#");
+  if (hashIndex !== -1) {
+    const pathPart = cleanPath.slice(0, hashIndex);
+    const hashPart = cleanPath.slice(hashIndex);
+    return pathPart ? `/${locale}/${pathPart}${hashPart}` : `/${locale}/${hashPart}`;
   }
 
   return `/${locale}/${cleanPath}`;
