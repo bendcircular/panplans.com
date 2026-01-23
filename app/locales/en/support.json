@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Support - PanPlans",
+    "description": "Get help and support for PanPlans."
+  },
+  "title": "Support Center",
+  "subtitle": "We're here to help you get the most out of PanPlans",
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have a question or need assistance? Reach out to our support team.",
+    "email": {
+      "label": "Email Support",
+      "address": "support@panplans.app",
+      "description": "We typically respond within 24-48 hours"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How do I set up my dietary preferences?",
+        "answer": "Go to Settings > Dietary Preferences in the app. You can select your diet type, allergies, and food preferences. PanPlans will use this information to personalize your meal suggestions."
+      },
+      {
+        "question": "Can I share my meal plans with family members?",
+        "answer": "Yes! PanPlans supports family sharing. Go to Settings > Family to invite family members. They can view and contribute to shared meal plans and shopping lists."
+      },
+      {
+        "question": "How do I add items to my pantry?",
+        "answer": "Open the Pantry tab and tap the '+' button. You can manually add items, scan barcodes, or add items from your shopping list when you purchase them."
+      },
+      {
+        "question": "Is my data backed up?",
+        "answer": "Yes, your data is automatically synced to our secure cloud servers. You can access your meal plans, pantry, and recipes from any device signed into your account."
+      },
+      {
+        "question": "How do I delete my account?",
+        "answer": "You can delete your account in Settings > Account > Delete Account. This will permanently remove all your data. See our Account Management page for detailed instructions."
+      },
+      {
+        "question": "Can I use PanPlans offline?",
+        "answer": "Yes, PanPlans works offline for basic features. Your data will sync automatically when you reconnect to the internet."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Additional Resources",
+    "items": [
+      {
+        "title": "Getting Started Guide",
+        "description": "Learn the basics of PanPlans and set up your first meal plan"
+      },
+      {
+        "title": "Video Tutorials",
+        "description": "Watch step-by-step tutorials for using PanPlans features"
+      },
+      {
+        "title": "Tips & Tricks",
+        "description": "Discover advanced features and pro tips for meal planning"
+      }
+    ]
+  },
+  "feedback": {
+    "title": "Send Feedback",
+    "description": "We love hearing from our users! If you have suggestions for improving PanPlans, please let us know.",
+    "email": "feedback@panplans.app"
+  }
+}

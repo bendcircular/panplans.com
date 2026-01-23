@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Terms of Service - PanPlans",
+    "description": "Read the terms and conditions for using PanPlans."
+  },
+  "title": "Terms of Service",
+  "lastUpdated": "Last Updated: January 2026",
+  "intro": "Please read these Terms of Service carefully before using the PanPlans mobile application.",
+  "sections": {
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing or using PanPlans, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use our app."
+    },
+    "description": {
+      "title": "Service Description",
+      "content": "PanPlans is a meal planning application that helps users plan meals, manage pantry inventory, create shopping lists, and track nutritional information. The app provides suggestions and recommendations based on user preferences and dietary requirements."
+    },
+    "accounts": {
+      "title": "User Accounts",
+      "content": "To use certain features of PanPlans, you must create an account. You are responsible for:",
+      "items": [
+        "Maintaining the confidentiality of your account credentials",
+        "All activities that occur under your account",
+        "Notifying us immediately of any unauthorized use"
+      ]
+    },
+    "acceptableUse": {
+      "title": "Acceptable Use",
+      "content": "You agree not to:",
+      "items": [
+        "Use the app for any unlawful purpose",
+        "Attempt to gain unauthorized access to our systems",
+        "Interfere with or disrupt the app's functionality",
+        "Upload malicious code or content",
+        "Impersonate another person or entity",
+        "Use the app to spam or harass others"
+      ]
+    },
+    "healthDisclaimer": {
+      "title": "Health and Nutrition Disclaimer",
+      "content": "Important: PanPlans provides nutritional information and meal suggestions for informational purposes only.",
+      "items": [
+        "We are not medical professionals and do not provide medical advice",
+        "Nutritional information may not be 100% accurate",
+        "Always consult with a healthcare provider for dietary advice",
+        "If you have food allergies or medical conditions, verify all ingredients independently"
+      ]
+    },
+    "allergenDisclaimer": {
+      "title": "Allergen Disclaimer",
+      "content": "While PanPlans allows you to set dietary restrictions and allergies, we cannot guarantee that all recipes or suggestions will be free from your specified allergens. You should:",
+      "items": [
+        "Always verify ingredients before preparing or consuming any food",
+        "Be aware of cross-contamination risks",
+        "Not rely solely on PanPlans for allergen information",
+        "Consult product labels and manufacturers when in doubt"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "All content, features, and functionality of PanPlans are owned by us and are protected by copyright, trademark, and other intellectual property laws."
+    },
+    "userContent": {
+      "title": "User Content",
+      "content": "You retain ownership of any content you create in PanPlans (recipes, meal plans, etc.). By using our app, you grant us a license to use, store, and display your content solely for the purpose of providing our services."
+    },
+    "termination": {
+      "title": "Account Termination",
+      "content": "We may suspend or terminate your account if you violate these terms. You may also delete your account at any time through the app settings or by contacting our support team."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "content": "To the maximum extent permitted by law, PanPlans shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the app."
+    },
+    "warranty": {
+      "title": "Disclaimer of Warranties",
+      "content": "PanPlans is provided \"as is\" and \"as available\" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "We reserve the right to modify these Terms of Service at any time. We will notify users of significant changes through the app or via email."
+    },
+    "governing": {
+      "title": "Governing Law",
+      "content": "These Terms shall be governed by and construed in accordance with the laws of Germany, without regard to its conflict of law provisions."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have questions about these Terms of Service, please contact us at:",
+      "email": "legal@panplans.app"
+    }
+  }
+}
