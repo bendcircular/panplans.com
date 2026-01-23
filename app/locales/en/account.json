@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Account Management - PanPlans",
+    "description": "Manage your PanPlans account, request data export, or delete your account."
+  },
+  "title": "Account Management",
+  "subtitle": "Manage your PanPlans account and data",
+  "sections": {
+    "deletion": {
+      "title": "Delete Your Account",
+      "description": "If you wish to delete your PanPlans account, you can do so through the app or by contacting us.",
+      "inApp": {
+        "title": "Delete via App",
+        "steps": [
+          "Open PanPlans on your device",
+          "Go to Settings (tap the gear icon)",
+          "Scroll down and tap 'Account'",
+          "Tap 'Delete Account'",
+          "Confirm your decision by entering your password",
+          "Your account and all associated data will be permanently deleted"
+        ]
+      },
+      "contact": {
+        "title": "Delete via Email",
+        "description": "Alternatively, you can request account deletion by emailing us:",
+        "email": "privacy@panplans.app",
+        "note": "Please include the email address associated with your account. We will process your request within 30 days."
+      },
+      "warning": "Warning: Account deletion is permanent and cannot be undone. All your meal plans, pantry data, recipes, and settings will be permanently deleted."
+    },
+    "export": {
+      "title": "Export Your Data",
+      "description": "You have the right to receive a copy of your personal data. To request a data export:",
+      "steps": [
+        "Open PanPlans on your device",
+        "Go to Settings > Account > Export Data",
+        "Select the data you want to export",
+        "Tap 'Export' to receive your data"
+      ],
+      "contact": {
+        "description": "You can also request a data export by emailing:",
+        "email": "privacy@panplans.app"
+      },
+      "format": "Your data will be provided in a portable format (JSON/CSV) within 30 days of your request."
+    },
+    "privacy": {
+      "title": "Privacy Choices",
+      "description": "Control how your data is used:",
+      "options": [
+        {
+          "title": "Analytics",
+          "description": "Help improve PanPlans by sharing anonymous usage data"
+        },
+        {
+          "title": "Personalization",
+          "description": "Allow PanPlans to use your preferences for better meal suggestions"
+        },
+        {
+          "title": "Notifications",
+          "description": "Receive helpful reminders about meal planning and expiring ingredients"
+        }
+      ],
+      "manage": "You can manage these settings in the app under Settings > Privacy."
+    },
+    "updateInfo": {
+      "title": "Update Your Information",
+      "description": "You can update your account information at any time:",
+      "items": [
+        "Email address: Settings > Account > Email",
+        "Password: Settings > Account > Change Password",
+        "Profile information: Settings > Profile",
+        "Dietary preferences: Settings > Dietary Preferences"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Need Help?",
+    "description": "If you have any questions about managing your account or data, please contact us:",
+    "email": "support@panplans.app"
+  }
+}

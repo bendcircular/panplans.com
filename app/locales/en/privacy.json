@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Privacy Policy - PanPlans",
+    "description": "Learn how PanPlans collects, uses, and protects your personal data."
+  },
+  "title": "Privacy Policy",
+  "lastUpdated": "Last Updated: January 2026",
+  "intro": "At PanPlans, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.",
+  "sections": {
+    "collection": {
+      "title": "Information We Collect",
+      "content": "We collect information that you provide directly to us, including:",
+      "items": [
+        "Account information (email address, name)",
+        "Profile information (dietary preferences, allergies, household size)",
+        "Pantry and ingredient data you enter",
+        "Meal plans and recipes you create or save",
+        "Shopping list data"
+      ]
+    },
+    "usage": {
+      "title": "How We Use Your Information",
+      "content": "We use the information we collect to:",
+      "items": [
+        "Provide, maintain, and improve our services",
+        "Personalize your meal planning experience",
+        "Generate recipe and meal suggestions",
+        "Send you technical notices and support messages",
+        "Respond to your comments and questions"
+      ]
+    },
+    "thirdParty": {
+      "title": "Third-Party Services",
+      "content": "We use the following third-party services to operate our app:",
+      "services": {
+        "clerk": {
+          "name": "Clerk",
+          "description": "For authentication and user account management"
+        },
+        "supabase": {
+          "name": "Supabase",
+          "description": "For secure data storage and real-time synchronization"
+        }
+      },
+      "note": "These services have their own privacy policies governing their use of your data."
+    },
+    "sharing": {
+      "title": "Data Sharing",
+      "content": "We do not sell your personal information. We may share your information only in the following circumstances:",
+      "items": [
+        "With your consent",
+        "To comply with legal obligations",
+        "To protect our rights and prevent fraud",
+        "With service providers who assist in our operations"
+      ]
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "content": "We retain your information for as long as your account is active or as needed to provide you services. You can request deletion of your account and associated data at any time."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "Depending on your location, you may have the following rights:",
+      "gdpr": {
+        "title": "For EU/EEA Users (GDPR)",
+        "items": [
+          "Right to access your personal data",
+          "Right to rectification of inaccurate data",
+          "Right to erasure (right to be forgotten)",
+          "Right to restrict processing",
+          "Right to data portability",
+          "Right to object to processing"
+        ]
+      },
+      "ccpa": {
+        "title": "For California Residents (CCPA/CPRA)",
+        "items": [
+          "Right to know what personal information is collected",
+          "Right to delete personal information",
+          "Right to opt-out of sale of personal information",
+          "Right to non-discrimination for exercising your rights"
+        ]
+      }
+    },
+    "children": {
+      "title": "Children's Privacy",
+      "content": "Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last Updated\" date."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have questions about this Privacy Policy or our privacy practices, please contact us at:",
+      "email": "privacy@panplans.app"
+    }
+  }
+}

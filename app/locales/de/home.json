@@ -1,30 +1,51 @@
 {
   "hero": {
-    "title": "Willkommen bei",
-    "titleAccent": "React Router v7",
-    "subtitle": "Ein sauberes Starter-Template mit Theme-Unterstützung, Internationalisierung und Radix UI Colors. Bereit, etwas Großartiges zu bauen.",
+    "title": "Intelligente Essensplanung",
+    "titleAccent": "Einfach Gemacht",
+    "subtitle": "PanPlans hilft dir bei der Planung nahrhafter Mahlzeiten, der Verwaltung deiner Vorräte und der Reduzierung von Lebensmittelverschwendung – unter Berücksichtigung deiner Ernährungsbedürfnisse und Allergien.",
     "cta": {
-      "docs": "Dokumentation lesen",
-      "github": "Quellcode ansehen"
-    },
-    "themeLabel": "Theme wechseln:"
+      "appStore": "Im App Store laden",
+      "learnMore": "Mehr erfahren"
+    }
   },
   "features": {
-    "title": "Enthaltene",
-    "titleAccent": "Features",
+    "title": "Warum",
+    "titleAccent": "PanPlans",
     "items": {
-      "routing": {
-        "title": "Dateibasiertes Routing",
-        "description": "React Router v7 mit verschachtelten Layouts, Loadern und Actions. Typsicheres Routing out of the box."
+      "mealPlanning": {
+        "title": "Intelligente Essensplanung",
+        "description": "Erhalte personalisierte Mahlzeitenvorschläge basierend auf deinen Vorlieben, Ernährungseinschränkungen und dem, was bereits in deiner Vorratskammer ist."
       },
-      "themes": {
-        "title": "Theme-Unterstützung",
-        "description": "Helle, dunkle und System-Themes mit next-themes. Radix UI Farbskalen für konsistentes Design."
+      "pantry": {
+        "title": "Vorratsverwaltung",
+        "description": "Verfolge deine Zutaten, überwache Ablaufdaten und lass nie wieder Lebensmittel verkommen."
       },
-      "i18n": {
-        "title": "Internationalisierung",
-        "description": "Eingebaute i18n mit react-i18next. Locale-präfixierte Routen und Sprachwechsel sofort einsatzbereit."
+      "allergies": {
+        "title": "Allergiesicher",
+        "description": "Lege deine Ernährungseinschränkungen und Allergien fest. PanPlans stellt sicher, dass jeder Rezeptvorschlag für dich sicher ist."
+      },
+      "shopping": {
+        "title": "Intelligente Einkaufslisten",
+        "description": "Erstelle automatisch Einkaufslisten basierend auf deinen Essensplänen. Kaufe nur, was du brauchst."
+      },
+      "nutrition": {
+        "title": "Nährwert-Tracking",
+        "description": "Behalte den Überblick über deine Nährstoffaufnahme mit detaillierten Aufschlüsselungen für jede Mahlzeit."
+      },
+      "sync": {
+        "title": "Geräteübergreifende Synchronisierung",
+        "description": "Greife auf deine Essenspläne, Vorräte und Einkaufslisten von jedem Gerät aus zu, überall."
       }
     }
+  },
+  "appPreview": {
+    "title": "Erlebe",
+    "titleAccent": "PanPlans",
+    "description": "Eine wunderschön gestaltete App, die Essensplanung zur Freude macht, nicht zur Last."
+  },
+  "download": {
+    "title": "Bereit loszulegen?",
+    "subtitle": "Lade PanPlans heute herunter und verändere die Art, wie du planst, kochst und isst.",
+    "appStore": "Im App Store laden"
   }
 }

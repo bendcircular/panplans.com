@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "title": "Kontoverwaltung - PanPlans",
+    "description": "Verwalte dein PanPlans-Konto, fordere Datenexport an oder lösche dein Konto."
+  },
+  "title": "Kontoverwaltung",
+  "subtitle": "Verwalte dein PanPlans-Konto und deine Daten",
+  "sections": {
+    "deletion": {
+      "title": "Konto löschen",
+      "description": "Wenn du dein PanPlans-Konto löschen möchtest, kannst du dies über die App oder durch Kontaktaufnahme mit uns tun.",
+      "inApp": {
+        "title": "Löschen über die App",
+        "steps": [
+          "Öffne PanPlans auf deinem Gerät",
+          "Gehe zu Einstellungen (tippe auf das Zahnrad-Symbol)",
+          "Scrolle nach unten und tippe auf 'Konto'",
+          "Tippe auf 'Konto löschen'",
+          "Bestätige deine Entscheidung durch Eingabe deines Passworts",
+          "Dein Konto und alle zugehörigen Daten werden dauerhaft gelöscht"
+        ]
+      },
+      "contact": {
+        "title": "Löschen per E-Mail",
+        "description": "Alternativ kannst du die Kontolöschung per E-Mail beantragen:",
+        "email": "privacy@panplans.app",
+        "note": "Bitte gib die mit deinem Konto verknüpfte E-Mail-Adresse an. Wir werden deine Anfrage innerhalb von 30 Tagen bearbeiten."
+      },
+      "warning": "Warnung: Die Kontolöschung ist dauerhaft und kann nicht rückgängig gemacht werden. Alle deine Essenspläne, Vorratsdaten, Rezepte und Einstellungen werden dauerhaft gelöscht."
+    },
+    "export": {
+      "title": "Deine Daten exportieren",
+      "description": "Du hast das Recht, eine Kopie deiner persönlichen Daten zu erhalten. Um einen Datenexport anzufordern:",
+      "steps": [
+        "Öffne PanPlans auf deinem Gerät",
+        "Gehe zu Einstellungen > Konto > Daten exportieren",
+        "Wähle die Daten aus, die du exportieren möchtest",
+        "Tippe auf 'Exportieren', um deine Daten zu erhalten"
+      ],
+      "contact": {
+        "description": "Du kannst auch einen Datenexport per E-Mail anfordern:",
+        "email": "privacy@panplans.app"
+      },
+      "format": "Deine Daten werden innerhalb von 30 Tagen nach deiner Anfrage in einem portablen Format (JSON/CSV) bereitgestellt."
+    },
+    "privacy": {
+      "title": "Datenschutz-Einstellungen",
+      "description": "Kontrolliere, wie deine Daten verwendet werden:",
+      "options": [
+        {
+          "title": "Analysen",
+          "description": "Hilf bei der Verbesserung von PanPlans durch Teilen anonymer Nutzungsdaten"
+        },
+        {
+          "title": "Personalisierung",
+          "description": "Erlaube PanPlans, deine Präferenzen für bessere Mahlzeitenvorschläge zu nutzen"
+        },
+        {
+          "title": "Benachrichtigungen",
+          "description": "Erhalte hilfreiche Erinnerungen zur Essensplanung und ablaufenden Zutaten"
+        }
+      ],
+      "manage": "Du kannst diese Einstellungen in der App unter Einstellungen > Datenschutz verwalten."
+    },
+    "updateInfo": {
+      "title": "Deine Informationen aktualisieren",
+      "description": "Du kannst deine Kontoinformationen jederzeit aktualisieren:",
+      "items": [
+        "E-Mail-Adresse: Einstellungen > Konto > E-Mail",
+        "Passwort: Einstellungen > Konto > Passwort ändern",
+        "Profilinformationen: Einstellungen > Profil",
+        "Ernährungspräferenzen: Einstellungen > Ernährungspräferenzen"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Brauchst du Hilfe?",
+    "description": "Wenn du Fragen zur Verwaltung deines Kontos oder deiner Daten hast, kontaktiere uns bitte:",
+    "email": "support@panplans.app"
+  }
+}

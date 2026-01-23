@@ -12,6 +12,14 @@ export default [
   // Locale-prefixed routes with locale validation
   route(":locale", "layouts/locale.tsx", [
     // Home page with website layout (includes header)
-    layout("layouts/website.tsx", [index("routes/home.tsx")]),
+    layout("layouts/website.tsx", [
+      index("routes/home.tsx"),
+      // Legal pages
+      route("privacy", "routes/privacy.tsx"),
+      route("terms", "routes/terms.tsx"),
+      // Support pages
+      route("support", "routes/support.tsx"),
+      route("account", "routes/account.tsx"),
+    ]),
   ]),
 ] satisfies RouteConfig;

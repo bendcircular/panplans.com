@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Nutzungsbedingungen - PanPlans",
+    "description": "Lies die Nutzungsbedingungen für PanPlans."
+  },
+  "title": "Nutzungsbedingungen",
+  "lastUpdated": "Zuletzt aktualisiert: Januar 2026",
+  "intro": "Bitte lies diese Nutzungsbedingungen sorgfältig durch, bevor du die PanPlans Mobile-Anwendung nutzt.",
+  "sections": {
+    "acceptance": {
+      "title": "Annahme der Bedingungen",
+      "content": "Durch den Zugriff auf oder die Nutzung von PanPlans erklärst du dich mit diesen Nutzungsbedingungen und unserer Datenschutzerklärung einverstanden. Wenn du diesen Bedingungen nicht zustimmst, nutze unsere App bitte nicht."
+    },
+    "description": {
+      "title": "Dienstbeschreibung",
+      "content": "PanPlans ist eine Essensplanungs-App, die Nutzern hilft, Mahlzeiten zu planen, den Vorratsbestand zu verwalten, Einkaufslisten zu erstellen und Nährwertinformationen zu verfolgen. Die App bietet Vorschläge und Empfehlungen basierend auf Nutzerpräferenzen und Ernährungsanforderungen."
+    },
+    "accounts": {
+      "title": "Benutzerkonten",
+      "content": "Um bestimmte Funktionen von PanPlans zu nutzen, musst du ein Konto erstellen. Du bist verantwortlich für:",
+      "items": [
+        "Die Geheimhaltung deiner Kontodaten",
+        "Alle Aktivitäten, die unter deinem Konto stattfinden",
+        "Die sofortige Benachrichtigung bei unbefugter Nutzung"
+      ]
+    },
+    "acceptableUse": {
+      "title": "Akzeptable Nutzung",
+      "content": "Du stimmst zu, Folgendes nicht zu tun:",
+      "items": [
+        "Die App für rechtswidrige Zwecke zu nutzen",
+        "Zu versuchen, unbefugten Zugriff auf unsere Systeme zu erlangen",
+        "Die Funktionalität der App zu stören oder zu beeinträchtigen",
+        "Schädlichen Code oder Inhalte hochzuladen",
+        "Eine andere Person oder Entität zu imitieren",
+        "Die App für Spam oder Belästigung zu nutzen"
+      ]
+    },
+    "healthDisclaimer": {
+      "title": "Gesundheits- und Ernährungshinweis",
+      "content": "Wichtig: PanPlans stellt Nährwertinformationen und Mahlzeitenvorschläge nur zu Informationszwecken bereit.",
+      "items": [
+        "Wir sind keine medizinischen Fachkräfte und geben keine medizinische Beratung",
+        "Nährwertinformationen sind möglicherweise nicht 100% genau",
+        "Konsultiere immer einen Arzt für Ernährungsberatung",
+        "Bei Lebensmittelallergien oder medizinischen Bedingungen überprüfe alle Zutaten unabhängig"
+      ]
+    },
+    "allergenDisclaimer": {
+      "title": "Allergen-Hinweis",
+      "content": "Obwohl PanPlans dir erlaubt, Ernährungseinschränkungen und Allergien festzulegen, können wir nicht garantieren, dass alle Rezepte oder Vorschläge frei von deinen angegebenen Allergenen sind. Du solltest:",
+      "items": [
+        "Zutaten immer überprüfen, bevor du Lebensmittel zubereitest oder verzehrst",
+        "Kreuzkontaminationsrisiken beachten",
+        "Dich nicht ausschließlich auf PanPlans für Allergeninformationen verlassen",
+        "Im Zweifelsfall Produktetiketten und Hersteller konsultieren"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Geistiges Eigentum",
+      "content": "Alle Inhalte, Funktionen und die Funktionalität von PanPlans sind unser Eigentum und durch Urheberrecht, Markenrecht und andere Gesetze zum Schutz geistigen Eigentums geschützt."
+    },
+    "userContent": {
+      "title": "Nutzerinhalte",
+      "content": "Du behältst das Eigentum an allen Inhalten, die du in PanPlans erstellst (Rezepte, Essenspläne usw.). Durch die Nutzung unserer App gewährst du uns eine Lizenz zur Nutzung, Speicherung und Anzeige deiner Inhalte ausschließlich zum Zweck der Bereitstellung unserer Dienste."
+    },
+    "termination": {
+      "title": "Kontokündigung",
+      "content": "Wir können dein Konto sperren oder kündigen, wenn du gegen diese Bedingungen verstößt. Du kannst dein Konto auch jederzeit über die App-Einstellungen oder durch Kontaktaufnahme mit unserem Support-Team löschen."
+    },
+    "liability": {
+      "title": "Haftungsbeschränkung",
+      "content": "Im maximal gesetzlich zulässigen Umfang haftet PanPlans nicht für indirekte, zufällige, besondere, Folge- oder Strafschäden, die sich aus deiner Nutzung oder Unfähigkeit zur Nutzung der App ergeben."
+    },
+    "warranty": {
+      "title": "Gewährleistungsausschluss",
+      "content": "PanPlans wird \"wie besehen\" und \"wie verfügbar\" ohne Gewährleistungen jeglicher Art bereitgestellt, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf stillschweigende Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung."
+    },
+    "changes": {
+      "title": "Änderungen der Bedingungen",
+      "content": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Wir werden Nutzer über wesentliche Änderungen durch die App oder per E-Mail informieren."
+    },
+    "governing": {
+      "title": "Anwendbares Recht",
+      "content": "Diese Bedingungen unterliegen den Gesetzen Deutschlands und werden in Übereinstimmung mit diesen ausgelegt, ohne Berücksichtigung von Kollisionsnormen."
+    },
+    "contact": {
+      "title": "Kontaktiere uns",
+      "content": "Wenn du Fragen zu diesen Nutzungsbedingungen hast, kontaktiere uns bitte unter:",
+      "email": "legal@panplans.app"
+    }
+  }
+}

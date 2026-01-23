@@ -1,30 +1,51 @@
 {
   "hero": {
-    "title": "Welcome to",
-    "titleAccent": "React Router v7",
-    "subtitle": "A clean starter template with theme support, internationalization, and Radix UI colors. Ready to build something amazing.",
+    "title": "Smart Meal Planning",
+    "titleAccent": "Made Simple",
+    "subtitle": "PanPlans helps you plan nutritious meals, manage your pantry, and reduce food waste - all while respecting your dietary needs and allergies.",
     "cta": {
-      "docs": "Read the Docs",
-      "github": "View Source"
-    },
-    "themeLabel": "Toggle theme:"
+      "appStore": "Download on the App Store",
+      "learnMore": "Learn More"
+    }
   },
   "features": {
-    "title": "Included",
-    "titleAccent": "Features",
+    "title": "Why Choose",
+    "titleAccent": "PanPlans",
     "items": {
-      "routing": {
-        "title": "File-Based Routing",
-        "description": "React Router v7 with nested layouts, loaders, and actions. Type-safe routing out of the box."
+      "mealPlanning": {
+        "title": "Smart Meal Planning",
+        "description": "Get personalized meal suggestions based on your preferences, dietary restrictions, and what's already in your pantry."
       },
-      "themes": {
-        "title": "Theme Support",
-        "description": "Light, dark, and system themes powered by next-themes. Radix UI color scales for consistent design."
+      "pantry": {
+        "title": "Pantry Management",
+        "description": "Track your ingredients, monitor expiration dates, and never let food go to waste again."
       },
-      "i18n": {
-        "title": "Internationalization",
-        "description": "Built-in i18n with react-i18next. Locale-prefixed routes and language switching ready to go."
+      "allergies": {
+        "title": "Allergy Safe",
+        "description": "Set your dietary restrictions and allergies. PanPlans ensures every recipe suggestion is safe for you."
+      },
+      "shopping": {
+        "title": "Smart Shopping Lists",
+        "description": "Automatically generate shopping lists based on your meal plans. Buy only what you need."
+      },
+      "nutrition": {
+        "title": "Nutrition Tracking",
+        "description": "Keep track of your nutritional intake with detailed breakdowns for every meal."
+      },
+      "sync": {
+        "title": "Cross-Device Sync",
+        "description": "Access your meal plans, pantry, and shopping lists from any device, anywhere."
       }
     }
+  },
+  "appPreview": {
+    "title": "Experience",
+    "titleAccent": "PanPlans",
+    "description": "A beautifully designed app that makes meal planning a joy, not a chore."
+  },
+  "download": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Download PanPlans today and transform the way you plan, cook, and eat.",
+    "appStore": "Download on the App Store"
   }
 }

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Datenschutzerklärung - PanPlans",
+    "description": "Erfahre, wie PanPlans deine persönlichen Daten sammelt, verwendet und schützt."
+  },
+  "title": "Datenschutzerklärung",
+  "lastUpdated": "Zuletzt aktualisiert: Januar 2026",
+  "intro": "Bei PanPlans nehmen wir deinen Datenschutz ernst. Diese Datenschutzerklärung erklärt, wie wir deine Informationen sammeln, verwenden, offenlegen und schützen, wenn du unsere mobile Anwendung nutzt.",
+  "sections": {
+    "collection": {
+      "title": "Informationen, die wir sammeln",
+      "content": "Wir sammeln Informationen, die du uns direkt zur Verfügung stellst, einschließlich:",
+      "items": [
+        "Kontoinformationen (E-Mail-Adresse, Name)",
+        "Profilinformationen (Ernährungspräferenzen, Allergien, Haushaltsgröße)",
+        "Vorrats- und Zutatendaten, die du eingibst",
+        "Essenspläne und Rezepte, die du erstellst oder speicherst",
+        "Einkaufslistendaten"
+      ]
+    },
+    "usage": {
+      "title": "Wie wir deine Informationen verwenden",
+      "content": "Wir verwenden die gesammelten Informationen, um:",
+      "items": [
+        "Unsere Dienste bereitzustellen, zu warten und zu verbessern",
+        "Dein Essensplanungserlebnis zu personalisieren",
+        "Rezept- und Mahlzeitenvorschläge zu generieren",
+        "Dir technische Hinweise und Support-Nachrichten zu senden",
+        "Auf deine Kommentare und Fragen zu antworten"
+      ]
+    },
+    "thirdParty": {
+      "title": "Drittanbieter-Dienste",
+      "content": "Wir nutzen die folgenden Drittanbieter-Dienste für den Betrieb unserer App:",
+      "services": {
+        "clerk": {
+          "name": "Clerk",
+          "description": "Für Authentifizierung und Benutzerkontoverwaltung"
+        },
+        "supabase": {
+          "name": "Supabase",
+          "description": "Für sichere Datenspeicherung und Echtzeit-Synchronisierung"
+        }
+      },
+      "note": "Diese Dienste haben eigene Datenschutzrichtlinien, die ihre Verwendung deiner Daten regeln."
+    },
+    "sharing": {
+      "title": "Datenweitergabe",
+      "content": "Wir verkaufen deine persönlichen Informationen nicht. Wir geben deine Informationen nur unter folgenden Umständen weiter:",
+      "items": [
+        "Mit deiner Zustimmung",
+        "Um rechtlichen Verpflichtungen nachzukommen",
+        "Um unsere Rechte zu schützen und Betrug zu verhindern",
+        "Mit Dienstleistern, die uns bei unserem Betrieb unterstützen"
+      ]
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "content": "Wir implementieren angemessene technische und organisatorische Maßnahmen, um deine persönlichen Informationen vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen."
+    },
+    "retention": {
+      "title": "Datenspeicherung",
+      "content": "Wir bewahren deine Informationen auf, solange dein Konto aktiv ist oder wie es für die Bereitstellung unserer Dienste erforderlich ist. Du kannst jederzeit die Löschung deines Kontos und der zugehörigen Daten beantragen."
+    },
+    "rights": {
+      "title": "Deine Rechte",
+      "content": "Je nach deinem Standort hast du möglicherweise folgende Rechte:",
+      "gdpr": {
+        "title": "Für EU/EWR-Nutzer (DSGVO)",
+        "items": [
+          "Recht auf Zugang zu deinen persönlichen Daten",
+          "Recht auf Berichtigung unrichtiger Daten",
+          "Recht auf Löschung (Recht auf Vergessenwerden)",
+          "Recht auf Einschränkung der Verarbeitung",
+          "Recht auf Datenübertragbarkeit",
+          "Recht auf Widerspruch gegen die Verarbeitung"
+        ]
+      },
+      "ccpa": {
+        "title": "Für Einwohner Kaliforniens (CCPA/CPRA)",
+        "items": [
+          "Recht zu erfahren, welche persönlichen Informationen gesammelt werden",
+          "Recht auf Löschung persönlicher Informationen",
+          "Recht auf Widerspruch gegen den Verkauf persönlicher Informationen",
+          "Recht auf Nichtdiskriminierung bei Ausübung deiner Rechte"
+        ]
+      }
+    },
+    "children": {
+      "title": "Datenschutz für Kinder",
+      "content": "Unsere App ist nicht für Kinder unter 13 Jahren bestimmt. Wir sammeln wissentlich keine persönlichen Informationen von Kindern unter 13 Jahren."
+    },
+    "changes": {
+      "title": "Änderungen dieser Richtlinie",
+      "content": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden dich über Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen und das Datum \"Zuletzt aktualisiert\" aktualisieren."
+    },
+    "contact": {
+      "title": "Kontaktiere uns",
+      "content": "Wenn du Fragen zu dieser Datenschutzerklärung oder unseren Datenschutzpraktiken hast, kontaktiere uns bitte unter:",
+      "email": "privacy@panplans.app"
+    }
+  }
+}

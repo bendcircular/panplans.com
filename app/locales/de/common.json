@@ -1,15 +1,31 @@
 {
-  "brand": "Starter",
+  "brand": "PanPlans",
   "language": {
     "en": "English",
     "de": "Deutsch",
     "switchTo": "Sprache wechseln"
   },
+  "nav": {
+    "features": "Funktionen",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "support": "Support",
+    "account": "Konto"
+  },
   "footer": {
-    "title": "React Router v7",
-    "description": "Ein modernes Framework für Web-Anwendungen.",
-    "github": "Auf GitHub ansehen",
-    "copyright": "© 2025 React Router",
-    "builtWith": "Erstellt mit React Router v7, Radix UI Colors & Tailwind CSS"
+    "title": "PanPlans",
+    "description": "Dein intelligenter Begleiter für die Essensplanung.",
+    "copyright": "© 2026 PanPlans. Alle Rechte vorbehalten.",
+    "links": {
+      "title": "Rechtliches",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "support": "Support",
+      "account": "Kontoverwaltung"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "support@panplans.app"
+    }
   }
 }

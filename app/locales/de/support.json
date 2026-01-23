@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Support - PanPlans",
+    "description": "Erhalte Hilfe und Support für PanPlans."
+  },
+  "title": "Support-Center",
+  "subtitle": "Wir helfen dir, das Beste aus PanPlans herauszuholen",
+  "contact": {
+    "title": "Kontaktiere uns",
+    "description": "Hast du eine Frage oder benötigst Hilfe? Wende dich an unser Support-Team.",
+    "email": {
+      "label": "E-Mail-Support",
+      "address": "support@panplans.app",
+      "description": "Wir antworten normalerweise innerhalb von 24-48 Stunden"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "question": "Wie richte ich meine Ernährungspräferenzen ein?",
+        "answer": "Gehe zu Einstellungen > Ernährungspräferenzen in der App. Du kannst deine Ernährungsform, Allergien und Lebensmittelpräferenzen auswählen. PanPlans verwendet diese Informationen, um deine Mahlzeitenvorschläge zu personalisieren."
+      },
+      {
+        "question": "Kann ich meine Essenspläne mit Familienmitgliedern teilen?",
+        "answer": "Ja! PanPlans unterstützt Familienfreigabe. Gehe zu Einstellungen > Familie, um Familienmitglieder einzuladen. Sie können gemeinsame Essenspläne und Einkaufslisten einsehen und bearbeiten."
+      },
+      {
+        "question": "Wie füge ich Artikel zu meinem Vorrat hinzu?",
+        "answer": "Öffne den Vorrats-Tab und tippe auf die '+'-Schaltfläche. Du kannst Artikel manuell hinzufügen, Barcodes scannen oder Artikel von deiner Einkaufsliste hinzufügen, wenn du sie kaufst."
+      },
+      {
+        "question": "Werden meine Daten gesichert?",
+        "answer": "Ja, deine Daten werden automatisch mit unseren sicheren Cloud-Servern synchronisiert. Du kannst von jedem Gerät aus auf deine Essenspläne, Vorräte und Rezepte zugreifen, das mit deinem Konto angemeldet ist."
+      },
+      {
+        "question": "Wie lösche ich mein Konto?",
+        "answer": "Du kannst dein Konto in Einstellungen > Konto > Konto löschen löschen. Dies entfernt alle deine Daten dauerhaft. Weitere Informationen findest du auf unserer Kontoverwaltungsseite."
+      },
+      {
+        "question": "Kann ich PanPlans offline nutzen?",
+        "answer": "Ja, PanPlans funktioniert offline für grundlegende Funktionen. Deine Daten werden automatisch synchronisiert, wenn du wieder mit dem Internet verbunden bist."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Weitere Ressourcen",
+    "items": [
+      {
+        "title": "Erste-Schritte-Anleitung",
+        "description": "Lerne die Grundlagen von PanPlans und erstelle deinen ersten Essensplan"
+      },
+      {
+        "title": "Video-Tutorials",
+        "description": "Schau dir Schritt-für-Schritt-Tutorials für PanPlans-Funktionen an"
+      },
+      {
+        "title": "Tipps & Tricks",
+        "description": "Entdecke erweiterte Funktionen und Profi-Tipps für die Essensplanung"
+      }
+    ]
+  },
+  "feedback": {
+    "title": "Feedback senden",
+    "description": "Wir freuen uns über Feedback von unseren Nutzern! Wenn du Vorschläge zur Verbesserung von PanPlans hast, lass es uns wissen.",
+    "email": "feedback@panplans.app"
+  }
+}
