@@ -30,8 +30,11 @@ export const links: Route.LinksFunction = () => [
     crossOrigin: "anonymous",
   },
   {
+    // Inter Variable - using optical size axis and weight range 300-500
+    // Design system: Never use bold, use size and spacing for hierarchy
+    // Weight 300 = Light (body text), 400 = Regular (headings)
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..500&display=swap",
   },
   {
     rel: "icon",

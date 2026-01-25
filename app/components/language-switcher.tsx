@@ -1,9 +1,15 @@
 import { Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
+import { cn } from "~/lib/utils";
 import { useLocale, useAlternateLocale } from "~/lib/useLocale";
 
 /**
- * Language switcher component that preserves the current path when switching languages
+ * Language Switcher - FlowFork Design System
+ *
+ * Design principles:
+ * - No bold/uppercase (using size and spacing)
+ * - Subtle border, monochrome
+ * - 44px min touch target
  */
 export function LanguageSwitcher() {
   const { t } = useTranslation("common");
@@ -20,12 +26,24 @@ export function LanguageSwitcher() {
   return (
     <Link
       to={alternateUrl}
-      className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-bold uppercase tracking-wider border-2 border-primary-border hover:border-accent-border-bright hover:text-accent-foreground transition-all duration-200"
+      className={cn(
+        "inline-flex items-center gap-2",
+        "px-4 py-2 min-h-[2.75rem]",
+        "text-sm font-light",
+        "border border-[var(--color-border)]",
+        "rounded-full",
+        "hover:border-[var(--color-foreground)]",
+        "transition-button"
+      )}
       title={t("language.switchTo")}
     >
-      <span className={currentLocale === "en" ? "opacity-50" : ""}>DE</span>
-      <span className="text-primary-foreground/30">/</span>
-      <span className={currentLocale === "de" ? "opacity-50" : ""}>EN</span>
+      <span className={currentLocale === "en" ? "text-[var(--color-inactive)]" : ""}>
+        DE
+      </span>
+      <span className="text-[var(--color-inactive)]">/</span>
+      <span className={currentLocale === "de" ? "text-[var(--color-inactive)]" : ""}>
+        EN
+      </span>
     </Link>
   );
 }
