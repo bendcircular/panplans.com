@@ -14,6 +14,7 @@ import {
   RefreshCw,
   ChevronDown,
 } from "lucide-react";
+import { PanPlansLogo } from "~/components/panplans-logo";
 
 /**
  * Home Page - FlowFork Design System
@@ -49,7 +50,8 @@ export default function Home() {
       {/* Uses calc to account for header height since main has pt-[--header-height] */}
       <section className="min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center px-6 md:px-8">
         <div className="max-w-2xl mx-auto text-center pt-8 md:pt-0">
-          {/* App icon - inverts in dark mode for proper contrast */}
+          {/* App icon - PanPlans logo (frying pan with chef hat) */}
+          {/* Inverts in dark mode for proper contrast */}
           <div
             className={cn(
               "w-20 h-20 md:w-24 md:h-24 mx-auto mb-8 mt-4",
@@ -61,15 +63,14 @@ export default function Home() {
               "dark:bg-[var(--color-white)] dark:border dark:border-[var(--color-border)]"
             )}
           >
-            <UtensilsCrossed
+            <PanPlansLogo
               className={cn(
-                "w-10 h-10 md:w-12 md:h-12",
                 // Light mode: white icon
                 "text-white",
                 // Dark mode: black icon
                 "dark:text-[var(--color-black)]"
               )}
-              strokeWidth={1.5}
+              size={48}
             />
           </div>
 
