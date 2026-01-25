@@ -46,18 +46,29 @@ export default function Home() {
   return (
     <Main>
       {/* Hero Section - Clean, minimal, no decorations */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-          {/* App icon - simple, monochrome */}
+      {/* Uses calc to account for header height since main has pt-[--header-height] */}
+      <section className="min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center px-6 md:px-8">
+        <div className="max-w-2xl mx-auto text-center pt-8 md:pt-0">
+          {/* App icon - inverts in dark mode for proper contrast */}
           <div
             className={cn(
-              "w-20 h-20 md:w-24 md:h-24 mx-auto mb-8",
-              "bg-[var(--color-black)] rounded-2xl",
-              "flex items-center justify-center"
+              "w-20 h-20 md:w-24 md:h-24 mx-auto mb-8 mt-4",
+              "rounded-2xl",
+              "flex items-center justify-center",
+              // Light mode: black background, white icon
+              "bg-[var(--color-black)]",
+              // Dark mode: white background with subtle border
+              "dark:bg-[var(--color-white)] dark:border dark:border-[var(--color-border)]"
             )}
           >
             <UtensilsCrossed
-              className="w-10 h-10 md:w-12 md:h-12 text-white"
+              className={cn(
+                "w-10 h-10 md:w-12 md:h-12",
+                // Light mode: white icon
+                "text-white",
+                // Dark mode: black icon
+                "dark:text-[var(--color-black)]"
+              )}
               strokeWidth={1.5}
             />
           </div>
