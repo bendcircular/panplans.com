@@ -46,7 +46,8 @@ export default function Home() {
   return (
     <Main>
       {/* Hero Section - Clean, minimal, no decorations */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-8">
+      {/* Uses calc to account for header height since main has pt-[--header-height] */}
+      <section className="min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center px-6 md:px-8">
         <div className="max-w-2xl mx-auto text-center">
           {/* App icon - simple, monochrome */}
           <div
