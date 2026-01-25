@@ -1,8 +1,15 @@
 import { useTranslation } from "react-i18next";
 import type { Route } from "./+types/terms";
+import { cn } from "~/lib/utils";
 import { Main } from "~/components/main";
 import { Footer } from "~/components/footer";
+import { Button } from "~/components/ui/button";
 import { Mail, AlertTriangle } from "lucide-react";
+
+/**
+ * Terms Page - FlowFork Design System
+ * Content page with proper hierarchy and alert states
+ */
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -19,18 +26,20 @@ export default function Terms() {
 
   return (
     <Main>
-      <article className="pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+      <article className="pt-28 pb-16 px-6 md:px-8 max-w-2xl mx-auto">
+        <header className="mb-10">
+          <h1 className="text-3xl md:text-4xl font-normal tracking-tight mb-3">
             {t("title")}
           </h1>
-          <p className="text-primary-foreground/60 font-medium">
+          <p className="text-[var(--color-text-muted)] font-light">
             {t("lastUpdated")}
           </p>
         </header>
 
-        <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-primary-foreground/80 mb-8">{t("intro")}</p>
+        <div className="space-y-8">
+          <p className="text-lg font-light text-[var(--color-text-muted)] leading-relaxed">
+            {t("intro")}
+          </p>
 
           {/* Acceptance of Terms */}
           <Section title={t("sections.acceptance.title")}>
@@ -68,15 +77,10 @@ export default function Terms() {
 
           {/* Health Disclaimer */}
           <Section title={t("sections.healthDisclaimer.title")}>
-            <div className="bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-500 p-4 mb-4">
-              <div className="flex items-start gap-3">
-                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
-                <p className="font-medium text-amber-800 dark:text-amber-200">
-                  {t("sections.healthDisclaimer.content")}
-                </p>
-              </div>
-            </div>
-            <ul className="list-disc pl-6 space-y-2">
+            <AlertBox variant="warning">
+              {t("sections.healthDisclaimer.content")}
+            </AlertBox>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
               {(t("sections.healthDisclaimer.items", { returnObjects: true }) as string[]).map(
                 (item, index) => (
                   <li key={index}>{item}</li>
@@ -87,15 +91,10 @@ export default function Terms() {
 
           {/* Allergen Disclaimer */}
           <Section title={t("sections.allergenDisclaimer.title")}>
-            <div className="bg-red-50 dark:bg-red-950/30 border-l-4 border-red-500 p-4 mb-4">
-              <div className="flex items-start gap-3">
-                <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
-                <p className="font-medium text-red-800 dark:text-red-200">
-                  {t("sections.allergenDisclaimer.content")}
-                </p>
-              </div>
-            </div>
-            <ul className="list-disc pl-6 space-y-2">
+            <AlertBox variant="error">
+              {t("sections.allergenDisclaimer.content")}
+            </AlertBox>
+            <ul className="list-disc pl-6 space-y-2 mt-4">
               {(t("sections.allergenDisclaimer.items", { returnObjects: true }) as string[]).map(
                 (item, index) => (
                   <li key={index}>{item}</li>
@@ -142,13 +141,12 @@ export default function Terms() {
           {/* Contact Us */}
           <Section title={t("sections.contact.title")}>
             <p>{t("sections.contact.content")}</p>
-            <a
-              href={`mailto:${t("sections.contact.email")}`}
-              className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-accent-solid text-white font-bold hover:bg-accent-solid-bright transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              {t("sections.contact.email")}
-            </a>
+            <Button asChild className="mt-4">
+              <a href={`mailto:${t("sections.contact.email")}`} className="gap-2">
+                <Mail className="w-4 h-4" strokeWidth={1.5} />
+                {t("sections.contact.email")}
+              </a>
+            </Button>
           </Section>
         </div>
       </article>
@@ -165,9 +163,43 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mb-10">
-      <h2 className="text-2xl font-bold mb-4 text-primary-foreground-bright">{title}</h2>
-      <div className="text-primary-foreground/80 space-y-4">{children}</div>
+    <section className="pb-6 border-b border-[var(--color-divider)] last:border-b-0">
+      <h2 className="text-xl font-normal mb-4">{title}</h2>
+      <div className="text-[var(--color-text-muted)] font-light space-y-3 leading-relaxed">
+        {children}
+      </div>
     </section>
+  );
+}
+
+/**
+ * Alert Box - Error states use the only red in the interface
+ * Design system: Red accent #DC2626 (only for errors)
+ */
+function AlertBox({
+  variant,
+  children,
+}: {
+  variant: "warning" | "error";
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className={cn(
+        "p-4 rounded-[1rem] flex items-start gap-3",
+        variant === "error" && "bg-[var(--color-error-bg)] border border-[var(--color-error)]/20",
+        variant === "warning" && "bg-[var(--color-divider)] border border-[var(--color-border)]"
+      )}
+    >
+      <AlertTriangle
+        className={cn(
+          "w-5 h-5 flex-shrink-0 mt-0.5",
+          variant === "error" && "text-[var(--color-error)]",
+          variant === "warning" && "text-[var(--color-text-muted)]"
+        )}
+        strokeWidth={1.5}
+      />
+      <p className="font-normal text-sm">{children}</p>
+    </div>
   );
 }

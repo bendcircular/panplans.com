@@ -1,7 +1,10 @@
 import { useTranslation } from "react-i18next";
 import type { Route } from "./+types/home";
+import { cn } from "~/lib/utils";
 import { Main } from "~/components/main";
 import { Footer } from "~/components/footer";
+import { Button } from "~/components/ui/button";
+import { Card, CardContent } from "~/components/ui/card";
 import {
   UtensilsCrossed,
   Package,
@@ -11,6 +14,19 @@ import {
   RefreshCw,
   ChevronDown,
 } from "lucide-react";
+
+/**
+ * Home Page - FlowFork Design System
+ *
+ * Key design principles applied:
+ * - No uppercase headings (feels aggressive)
+ * - No shadows (they feel heavy, we want air)
+ * - No gradients except photo overlays
+ * - No colorful accents (color = ingredients only)
+ * - Size and spacing for hierarchy, never bold
+ * - Container max-width: 640px for readable content
+ * - 8px spacing system
+ */
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -29,65 +45,73 @@ export default function Home() {
 
   return (
     <Main>
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-12 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent-background-bright rounded-full opacity-50 blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary-interactive rounded-full opacity-50 blur-3xl" />
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          {/* App icon placeholder */}
-          <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-8 bg-accent-solid rounded-3xl flex items-center justify-center shadow-2xl">
-            <UtensilsCrossed className="w-12 h-12 md:w-16 md:h-16 text-white" />
+      {/* Hero Section - Clean, minimal, no decorations */}
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          {/* App icon - simple, monochrome */}
+          <div
+            className={cn(
+              "w-20 h-20 md:w-24 md:h-24 mx-auto mb-8",
+              "bg-[var(--color-black)] rounded-2xl",
+              "flex items-center justify-center"
+            )}
+          >
+            <UtensilsCrossed
+              className="w-10 h-10 md:w-12 md:h-12 text-white"
+              strokeWidth={1.5}
+            />
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight mb-6">
+          {/* Title - size for hierarchy, not weight or uppercase */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-6">
             {t("hero.title")}{" "}
-            <span className="text-accent-foreground">{t("hero.titleAccent")}</span>
+            <span className="text-[var(--color-text-muted)]">
+              {t("hero.titleAccent")}
+            </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl font-light text-[var(--color-text-muted)] max-w-xl mx-auto mb-10 leading-relaxed">
             {t("hero.subtitle")}
           </p>
 
+          {/* CTAs using Button component */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* App Store Badge */}
-            <a
-              href="#download"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-solid text-primary-background font-black uppercase tracking-wide text-sm hover:bg-primary-solid-bright transition-all transform hover:scale-105"
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-              </svg>
-              {t("hero.cta.appStore")}
-            </a>
+            <Button asChild>
+              <a href="#download" className="gap-3">
+                <AppleIcon className="w-5 h-5" />
+                {t("hero.cta.appStore")}
+              </a>
+            </Button>
 
-            <a
-              href="#features"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary-border font-bold uppercase tracking-wide text-sm hover:border-primary-foreground transition-colors"
-            >
-              {t("hero.cta.learnMore")}
-            </a>
+            <Button variant="secondary" asChild>
+              <a href="#features">{t("hero.cta.learnMore")}</a>
+            </Button>
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - subtle */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-primary-foreground/40" />
+          <ChevronDown
+            className="w-6 h-6 text-[var(--color-inactive)]"
+            strokeWidth={1.5}
+          />
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 md:py-32 px-6 md:px-12 bg-primary-background-bright">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-center mb-16">
+      {/* Features Section - Clean grid, no heavy borders */}
+      <section
+        id="features"
+        className="py-16 md:py-24 px-6 md:px-8 bg-[var(--color-divider)]"
+      >
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-center mb-12">
             {t("features.title")}{" "}
-            <span className="text-accent-foreground">{t("features.titleAccent")}</span>
+            <span className="text-[var(--color-text-muted)]">
+              {t("features.titleAccent")}
+            </span>
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
               icon={UtensilsCrossed}
               title={t("features.items.mealPlanning.title")}
@@ -122,65 +146,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Preview Section */}
-      <section className="py-20 md:py-32 px-6 md:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-background rounded-full opacity-30 blur-3xl" />
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6">
+      {/* App Preview Section - Clean, no background blurs */}
+      <section className="py-16 md:py-24 px-6 md:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-normal tracking-tight mb-4">
               {t("appPreview.title")}{" "}
-              <span className="text-accent-foreground">{t("appPreview.titleAccent")}</span>
+              <span className="text-[var(--color-text-muted)]">
+                {t("appPreview.titleAccent")}
+              </span>
             </h2>
-            <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg font-light text-[var(--color-text-muted)] max-w-xl mx-auto">
               {t("appPreview.description")}
             </p>
           </div>
 
-          {/* App Screenshots Placeholder */}
-          <div className="flex justify-center items-center gap-4 md:gap-8">
-            <div className="w-48 md:w-64 h-96 md:h-[500px] bg-primary-background-bright border-4 border-primary-border rounded-3xl shadow-2xl transform -rotate-6 hidden md:block">
-              <div className="w-full h-full flex items-center justify-center text-primary-foreground/30">
-                <span className="text-sm font-medium">App Screenshot</span>
-              </div>
+          {/* App Screenshots - Clean borders, no shadows */}
+          <div className="flex justify-center items-center gap-4 md:gap-6">
+            <div
+              className={cn(
+                "w-44 md:w-56 h-80 md:h-[440px]",
+                "bg-[var(--color-background)] border border-[var(--color-border)]",
+                "rounded-2xl transform -rotate-3 hidden md:flex",
+                "items-center justify-center"
+              )}
+            >
+              <span className="text-sm font-light text-[var(--color-inactive)]">
+                App Screenshot
+              </span>
             </div>
-            <div className="w-56 md:w-72 h-[420px] md:h-[540px] bg-primary-background-bright border-4 border-accent-border rounded-3xl shadow-2xl z-10">
-              <div className="w-full h-full flex items-center justify-center text-primary-foreground/30">
-                <span className="text-sm font-medium">App Screenshot</span>
-              </div>
+            <div
+              className={cn(
+                "w-52 md:w-64 h-96 md:h-[480px]",
+                "bg-[var(--color-background)] border-2 border-[var(--color-black)]",
+                "rounded-2xl z-10 flex items-center justify-center"
+              )}
+            >
+              <span className="text-sm font-light text-[var(--color-inactive)]">
+                App Screenshot
+              </span>
             </div>
-            <div className="w-48 md:w-64 h-96 md:h-[500px] bg-primary-background-bright border-4 border-primary-border rounded-3xl shadow-2xl transform rotate-6 hidden md:block">
-              <div className="w-full h-full flex items-center justify-center text-primary-foreground/30">
-                <span className="text-sm font-medium">App Screenshot</span>
-              </div>
+            <div
+              className={cn(
+                "w-44 md:w-56 h-80 md:h-[440px]",
+                "bg-[var(--color-background)] border border-[var(--color-border)]",
+                "rounded-2xl transform rotate-3 hidden md:flex",
+                "items-center justify-center"
+              )}
+            >
+              <span className="text-sm font-light text-[var(--color-inactive)]">
+                App Screenshot
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Download CTA Section */}
+      {/* Download CTA Section - Inverted monochrome */}
       <section
         id="download"
-        className="py-20 md:py-32 px-6 md:px-12 bg-primary-solid text-primary-background"
+        className="py-16 md:py-24 px-6 md:px-8 bg-[var(--color-black)] text-white"
       >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-normal tracking-tight mb-4">
             {t("download.title")}
           </h2>
-          <p className="text-lg text-primary-background/70 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg font-light text-white/60 mb-10 max-w-xl mx-auto">
             {t("download.subtitle")}
           </p>
 
-          {/* App Store Badge */}
+          {/* App Store Badge - inverted colors */}
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-primary-background text-primary-solid font-black uppercase tracking-wide hover:bg-primary-background-bright transition-all transform hover:scale-105"
+            className={cn(
+              "inline-flex items-center gap-3",
+              "px-8 py-4",
+              "bg-white text-[var(--color-black)]",
+              "font-light text-base",
+              "rounded-full",
+              "hover:bg-white/90 transition-button"
+            )}
           >
-            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
+            <AppleIcon className="w-6 h-6" />
             {t("download.appStore")}
           </a>
         </div>
@@ -191,22 +238,53 @@ export default function Home() {
   );
 }
 
+/**
+ * Feature Card - Uses design system Card with monochrome icon
+ */
 function FeatureCard({
   icon: Icon,
   title,
   description,
 }: {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
   title: string;
   description: string;
 }) {
   return (
-    <div className="p-8 bg-primary-background border-4 border-primary-border hover:border-accent-border transition-colors group">
-      <div className="w-14 h-14 bg-accent-solid rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-        <Icon className="w-7 h-7 text-white" />
-      </div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-primary-foreground/70">{description}</p>
-    </div>
+    <Card interactive className="group">
+      <CardContent className="pt-6">
+        {/* Icon - monochrome, no colorful backgrounds */}
+        <div
+          className={cn(
+            "w-12 h-12 mb-5",
+            "border border-[var(--color-border)]",
+            "rounded-xl",
+            "flex items-center justify-center",
+            "group-hover:border-[var(--color-black)] transition-calm"
+          )}
+        >
+          <Icon
+            className="w-6 h-6 text-[var(--color-text-primary)]"
+            strokeWidth={1.5}
+          />
+        </div>
+        {/* Title - size for hierarchy, not weight */}
+        <h3 className="text-lg font-normal mb-2">{title}</h3>
+        <p className="text-base font-light text-[var(--color-text-muted)] leading-relaxed">
+          {description}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
+
+/**
+ * Apple Icon - Simple outline style matching design system
+ */
+function AppleIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+    </svg>
   );
 }

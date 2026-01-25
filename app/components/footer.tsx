@@ -1,36 +1,50 @@
 import { useTranslation } from "react-i18next";
+import { cn } from "~/lib/utils";
 import { LocalizedLink } from "~/lib/localizedLink";
 import { Mail } from "lucide-react";
 
+/**
+ * Footer Component - FlowFork Design System
+ *
+ * Design principles applied:
+ * - Inverted monochrome (black background, white text)
+ * - No uppercase headings (feels aggressive)
+ * - No decorative elements or gradients
+ * - Light font weights with size hierarchy
+ * - Clean divider lines
+ */
 export function Footer() {
   const { t } = useTranslation("common");
 
   return (
-    <footer className="bg-primary-solid text-primary-background relative overflow-hidden py-16 px-6 md:px-12">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent-background-bright opacity-10 -rotate-45 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+    <footer
+      className={cn(
+        "bg-[var(--color-black)] text-[var(--color-white)]",
+        "py-12 md:py-16 px-6 md:px-8"
+      )}
+    >
+      <div className="max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10 md:gap-12 mb-10">
           {/* Brand */}
           <div>
-            <h3 className="font-black text-3xl md:text-4xl uppercase tracking-tight mb-4">
+            <h3 className="text-2xl md:text-3xl font-normal mb-4">
               {t("footer.title")}
             </h3>
-            <p className="text-primary-background/70 font-medium">
+            <p className="text-white/60 font-light text-base leading-relaxed">
               {t("footer.description")}
             </p>
           </div>
 
           {/* Legal Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4 uppercase tracking-wide">
+            <h4 className="text-lg font-normal mb-4">
               {t("footer.links.title")}
             </h4>
             <ul className="space-y-3">
               <li>
                 <LocalizedLink
                   to="/privacy"
-                  className="text-primary-background/70 hover:text-primary-background transition-colors"
+                  className="text-white/60 font-light hover:text-white transition-button"
                 >
                   {t("footer.links.privacy")}
                 </LocalizedLink>
@@ -38,7 +52,7 @@ export function Footer() {
               <li>
                 <LocalizedLink
                   to="/terms"
-                  className="text-primary-background/70 hover:text-primary-background transition-colors"
+                  className="text-white/60 font-light hover:text-white transition-button"
                 >
                   {t("footer.links.terms")}
                 </LocalizedLink>
@@ -46,7 +60,7 @@ export function Footer() {
               <li>
                 <LocalizedLink
                   to="/support"
-                  className="text-primary-background/70 hover:text-primary-background transition-colors"
+                  className="text-white/60 font-light hover:text-white transition-button"
                 >
                   {t("footer.links.support")}
                 </LocalizedLink>
@@ -54,7 +68,7 @@ export function Footer() {
               <li>
                 <LocalizedLink
                   to="/account"
-                  className="text-primary-background/70 hover:text-primary-background transition-colors"
+                  className="text-white/60 font-light hover:text-white transition-button"
                 >
                   {t("footer.links.account")}
                 </LocalizedLink>
@@ -64,26 +78,23 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-4 uppercase tracking-wide">
+            <h4 className="text-lg font-normal mb-4">
               {t("footer.contact.title")}
             </h4>
             <a
               href={`mailto:${t("footer.contact.email")}`}
-              className="inline-flex items-center gap-2 text-primary-background/70 hover:text-primary-background transition-colors"
+              className="inline-flex items-center gap-2 text-white/60 font-light hover:text-white transition-button"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" strokeWidth={1.5} />
               {t("footer.contact.email")}
             </a>
           </div>
         </div>
 
-        <div className="mb-8 flex items-center gap-4">
-          <div className="flex-1 h-0.5 bg-primary-background/20" />
-          <div className="w-6 h-6 border-2 border-primary-background/20 transform rotate-45" />
-          <div className="flex-1 h-0.5 bg-primary-background/20" />
-        </div>
+        {/* Clean divider - 1px line, no decorative elements */}
+        <div className="h-px bg-white/20 mb-8" />
 
-        <div className="text-center font-bold text-sm text-primary-background/60">
+        <div className="text-center text-sm text-white/40 font-light">
           <p>{t("footer.copyright")}</p>
         </div>
       </div>

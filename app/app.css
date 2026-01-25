@@ -1,158 +1,238 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@import "@radix-ui/colors/gray.css";
-@import "@radix-ui/colors/gray-dark.css";
-
-@import "@radix-ui/colors/iris.css";
-@import "@radix-ui/colors/iris-dark.css";
-
-@import "@radix-ui/colors/pink.css";
-@import "@radix-ui/colors/pink-dark.css";
-
-@import "@radix-ui/colors/crimson.css";
-@import "@radix-ui/colors/crimson-dark.css";
-
-@import "@radix-ui/colors/purple.css";
-@import "@radix-ui/colors/purple-dark.css";
-
-@import "@radix-ui/colors/blue.css";
-@import "@radix-ui/colors/blue-dark.css";
-
-@import "@radix-ui/colors/green.css";
-@import "@radix-ui/colors/green-dark.css";
-
-@import "@radix-ui/colors/red.css";
-@import "@radix-ui/colors/red-dark.css";
-
 @custom-variant dark (&:is(.dark *));
 
+/* =============================================================================
+   FlowFork Design System
+   Culinary clarity through considered minimalism
+   ============================================================================= */
+
 @theme {
+  /* Typography - Inter as primary (Agrandir fallback) */
   --font-sans:
     "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
 
-html,
-body {
-  @apply bg-background;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+  /* 8px Base Spacing Scale - using 'space' prefix to avoid Tailwind conflicts */
+  --space-xxs: 0.25rem;  /* 4px - tight inline elements */
+  --space-xs: 0.5rem;    /* 8px - list item padding */
+  --space-sm: 1rem;      /* 16px - default gap */
+  --space-md: 1.5rem;    /* 24px - section internal */
+  --space-lg: 2rem;      /* 32px - major sections */
+  --space-xl: 3rem;      /* 48px - screen padding */
+  --space-xxl: 4rem;     /* 64px - hero isolation */
 }
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  /* Border Radius */
+  --radius-sm: 0.375rem;   /* 6px - checkboxes */
+  --radius-md: 1rem;       /* 16px - cards */
+  --radius-lg: 1.5rem;     /* 24px - larger cards */
+  --radius-full: 6.25rem;  /* 100px - pill buttons */
 
-  /* Primary colors */
-  --color-primary-1: var(--iris-1);
-  --color-primary-2: var(--iris-2);
-  --color-primary-3: var(--iris-3);
-  --color-primary-4: var(--iris-4);
-  --color-primary-5: var(--iris-5);
-  --color-primary-6: var(--iris-6);
-  --color-primary-7: var(--iris-7);
-  --color-primary-8: var(--iris-8);
-  --color-primary-9: var(--iris-9);
-  --color-primary-10: var(--iris-10);
-  --color-primary-11: var(--iris-11);
-  --color-primary-12: var(--iris-12);
+  /* ==========================================================================
+     Achromatic Foundation (Light Mode)
+     Color appears ONLY in ingredient pictograms. Interface stays monochrome.
+     ========================================================================== */
 
-  /* Primary semantic colors */
-  --color-primary-background: var(--color-primary-1);
-  --color-primary-background-bright: var(--color-primary-2);
-  --color-primary-interactive: var(--color-primary-3);
-  --color-primary-interactive-medium: var(--color-primary-4);
-  --color-primary-interactive-bright: var(--color-primary-5);
-  --color-primary-border: var(--color-primary-6);
-  --color-primary-border-medium: var(--color-primary-7);
-  --color-primary-border-bright: var(--color-primary-8);
-  --color-primary-solid: var(--color-primary-9);
-  --color-primary-solid-bright: var(--color-primary-10);
-  --color-primary-foreground: var(--color-primary-11);
-  --color-primary-foreground-bright: var(--color-primary-12);
+  /* Core Colors */
+  --color-black: #0A0A0A;           /* Primary black - warm, never pure #000 */
+  --color-white: #FFFFFF;           /* Background white */
+  --color-divider: #F5F5F5;         /* Almost invisible borders */
+  --color-inactive: #BDBDBD;        /* Disabled states, metadata */
+  --color-border-light: #F0F0F0;    /* Card borders */
+  --color-border: #E0E0E0;          /* Secondary borders */
+  --color-surface: #FAFAFA;         /* Selected state fill */
 
-  /* Accent colors */
-  --color-accent-1: var(--purple-1);
-  --color-accent-2: var(--purple-2);
-  --color-accent-3: var(--purple-3);
-  --color-accent-4: var(--purple-4);
-  --color-accent-5: var(--purple-5);
-  --color-accent-6: var(--purple-6);
-  --color-accent-7: var(--purple-7);
-  --color-accent-8: var(--purple-8);
-  --color-accent-9: var(--purple-9);
-  --color-accent-10: var(--purple-10);
-  --color-accent-11: var(--purple-11);
-  --color-accent-12: var(--purple-12);
+  /* Semantic Color Mappings */
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-black);
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-inactive);
+  --color-text-muted: #757575;
 
-  /* Accent semantic colors */
-  --color-accent-background: var(--color-accent-1);
-  --color-accent-background-bright: var(--color-accent-2);
-  --color-accent-interactive: var(--color-accent-3);
-  --color-accent-interactive-medium: var(--color-accent-4);
-  --color-accent-interactive-bright: var(--color-accent-5);
-  --color-accent-border: var(--color-accent-6);
-  --color-accent-border-medium: var(--color-accent-7);
-  --color-accent-border-bright: var(--color-accent-8);
-  --color-accent-solid: var(--color-accent-9);
-  --color-accent-solid-bright: var(--color-accent-10);
-  --color-accent-foreground: var(--color-accent-11);
-  --color-accent-foreground-bright: var(--color-accent-12);
+  /* Interactive States */
+  --color-hover-bg: var(--color-divider);
+  --color-active-bg: var(--color-surface);
+  --color-focus-ring: var(--color-black);
 
-  /* Accent colors */
+  /* Error State - only red in the interface */
+  --color-error: #DC2626;
+  --color-error-bg: #FEF2F2;
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  /* Success State */
+  --color-success: #16A34A;
+  --color-success-bg: #F0FDF4;
+
+  /* ==========================================================================
+     Ingredient Color System (for pictograms only)
+     Each ingredient gets ONE signature color - flat, friendly, 60% saturation
+     ========================================================================== */
+  --color-ingredient-vegetable: #4CAF50;  /* Green - broccoli, lettuce */
+  --color-ingredient-allium: #9C27B0;     /* Purple - onion, garlic */
+  --color-ingredient-protein: #FF6B6B;    /* Coral - meat, fish */
+  --color-ingredient-dairy: #F5DEB3;      /* Wheat beige */
+  --color-ingredient-grain: #D4A574;      /* Warm tan - rice, pasta */
+  --color-ingredient-citrus: #FFA726;     /* Bright orange */
+  --color-ingredient-berry: #E91E63;      /* Pink-red */
+
+  /* ==========================================================================
+     Component Tokens
+     ========================================================================== */
+
+  /* Buttons */
+  --color-btn-primary-bg: var(--color-black);
+  --color-btn-primary-text: var(--color-white);
+  --color-btn-primary-hover: #1A1A1A;
+  --color-btn-disabled-bg: var(--color-divider);
+  --color-btn-disabled-text: var(--color-inactive);
+  --color-btn-secondary-border: var(--color-border);
+  --color-btn-secondary-text: var(--color-black);
+
+  /* Cards */
+  --color-card-bg: var(--color-white);
+  --color-card-border: var(--color-border-light);
+  --color-card-border-hover: var(--color-border);
+
+  /* Selection States */
+  --color-selection-border: var(--color-black);
+  --color-selection-bg: var(--color-surface);
+  --color-unselected-border: var(--color-border);
+
+  /* Progress */
+  --color-progress-track: var(--color-divider);
+  --color-progress-fill: var(--color-black);
+
+  /* Legacy compatibility (can remove later) */
+  --color-primary-background: var(--color-background);
+  --color-primary-foreground: var(--color-foreground);
+  --color-primary-solid: var(--color-black);
+  --color-muted: var(--color-divider);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-border: var(--color-border);
+  --color-input: var(--color-white);
+  --color-ring: var(--color-black);
+  --color-destructive: var(--color-error);
 }
 
-:root {
-  --radius: 0.625rem;
+/* Dark mode - inverted monochrome */
+.dark {
+  --color-background: #0A0A0A;
+  --color-foreground: #FAFAFA;
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A3A3A3;
+  --color-text-muted: #737373;
+  --color-divider: #1A1A1A;
+  --color-border-light: #262626;
+  --color-border: #404040;
+  --color-surface: #171717;
+  --color-hover-bg: #262626;
+  --color-active-bg: #1A1A1A;
+  --color-focus-ring: #FAFAFA;
+
+  /* Buttons in dark mode */
+  --color-btn-primary-bg: #FAFAFA;
+  --color-btn-primary-text: #0A0A0A;
+  --color-btn-primary-hover: #E5E5E5;
+  --color-btn-disabled-bg: #262626;
+  --color-btn-disabled-text: #525252;
+  --color-btn-secondary-border: #404040;
+  --color-btn-secondary-text: #FAFAFA;
+
+  /* Cards in dark mode */
+  --color-card-bg: #171717;
+  --color-card-border: #262626;
+  --color-card-border-hover: #404040;
+
+  /* Selection in dark mode */
+  --color-selection-border: #FAFAFA;
+  --color-selection-bg: #1A1A1A;
+  --color-unselected-border: #404040;
+
+  /* Progress in dark mode */
+  --color-progress-track: #262626;
+  --color-progress-fill: #FAFAFA;
+
+  /* Legacy compatibility */
+  --color-primary-background: var(--color-background);
+  --color-primary-foreground: var(--color-foreground);
+  --color-primary-solid: var(--color-foreground);
 }
+
+/* =============================================================================
+   Base Styles
+   ============================================================================= */
 
 @layer base {
   * {
-    @apply border-primary-border outline-primary-border-bright text-primary-foreground-bright;
+    @apply border-[var(--color-border)] outline-[var(--color-focus-ring)];
   }
+
+  html {
+    scroll-behavior: smooth;
+    /* Typography: minimum 16px body, legible at a glance */
+    font-size: 16px;
+  }
+
   body {
-    @apply bg-primary-background text-primary-foreground;
+    @apply bg-[var(--color-background)] text-[var(--color-text-primary)];
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Line height: 1.6 for paragraphs */
+    line-height: 1.6;
+  }
+
+  /* Typography hierarchy - size and spacing, never bold */
+  h1, h2, h3, h4, h5, h6 {
+    /* Line height: 1.2 for headings */
+    line-height: 1.2;
+    /* Letter spacing: -0.5% for large headings */
+    letter-spacing: -0.005em;
+    font-weight: 400;
+  }
+
+  /* Body text - no letter spacing adjustment */
+  p, li, td, th {
+    letter-spacing: 0;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+/* =============================================================================
+   Utility Classes
+   ============================================================================= */
+
+/* Container - max-width 640px for readability */
+.container-readable {
+  max-width: 40rem; /* 640px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;  /* 24px mobile */
+  padding-right: 1.5rem;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media (min-width: 768px) {
+  .container-readable {
+    padding-left: 2rem;  /* 32px tablet+ */
+    padding-right: 2rem;
+  }
+}
+
+/* Animation: calm efficiency, never showboat */
+.transition-calm {
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-duration: 200ms;
+}
+
+.transition-button {
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-duration: 150ms;
+}
+
+.transition-page {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 400ms;
 }

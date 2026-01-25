@@ -1,0 +1,102 @@
+---
+description: Tailwind CSS v4 styling conventions - FlowFork Design System
+globs: ["app/**/*.tsx", "app/**/*.css"]
+---
+
+# Tailwind CSS v4 - FlowFork Design System
+
+## CSS-First Configuration
+
+Tailwind v4 uses CSS-first configuration in `app/app.css`:
+
+```css
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --spacing-xxs: 0.25rem;  /* 4px */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+}
+
+@theme inline {
+  --color-black: #0A0A0A;
+  --color-white: #FFFFFF;
+  --color-divider: #F5F5F5;
+  --color-inactive: #BDBDBD;
+}
+```
+
+## Design Principles
+
+- **Monochrome foundation**: Interface stays black/white/gray
+- **Color = ingredients only**: Use ingredient colors only for food pictograms
+- **No bold text**: Use size and spacing for hierarchy, never font-weight
+- **No shadows**: Clean, airy feel
+- **No uppercase headings**: Feels aggressive
+
+## CSS Variables
+
+Use CSS variables for all colors:
+
+```tsx
+// Good: Using design system variables
+<div className="bg-[var(--color-background)] text-[var(--color-text-primary)]" />
+
+// Bad: Using hardcoded colors
+<div className="bg-white text-black" />
+```
+
+## Class Merging
+
+Always use the `cn()` utility for conditional classes:
+
+```typescript
+import { cn } from "~/lib/utils";
+
+<div className={cn(
+  "base-classes",
+  isActive && "active-classes",
+  className
+)} />
+```
+
+## Component Variants with CVA
+
+Use `class-variance-authority` for component variants:
+
+```typescript
+import { cva, type VariantProps } from "class-variance-authority";
+
+const buttonVariants = cva("base-classes rounded-full", {
+  variants: {
+    variant: {
+      primary: "bg-[var(--color-btn-primary-bg)] text-[var(--color-btn-primary-text)]",
+      secondary: "bg-transparent border border-[var(--color-btn-secondary-border)]",
+    },
+    size: {
+      default: "px-8 py-4",
+      sm: "px-6 py-3",
+    },
+  },
+});
+```
+
+## Spacing Scale (8px base)
+
+- `spacing-xxs`: 4px - tight inline elements
+- `spacing-xs`: 8px - list item padding
+- `spacing-sm`: 16px - default gap between related items
+- `spacing-md`: 24px - section internal spacing
+- `spacing-lg`: 32px - between major sections
+- `spacing-xl`: 48px - screen top/bottom padding
+
+## Typography Rules
+
+- Minimum body size: 16px
+- Line height: 1.6 for paragraphs, 1.2 for headings
+- Letter spacing: -0.5% for large headings, 0% for body
+- Font weights: 300 (light) for body, 400 (regular) for headings

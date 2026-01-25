@@ -1,8 +1,15 @@
 import { useTranslation } from "react-i18next";
 import type { Route } from "./+types/privacy";
+import { cn } from "~/lib/utils";
 import { Main } from "~/components/main";
 import { Footer } from "~/components/footer";
+import { Button } from "~/components/ui/button";
 import { Mail } from "lucide-react";
+
+/**
+ * Privacy Page - FlowFork Design System
+ * Content page with readable typography and proper hierarchy
+ */
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -19,18 +26,20 @@ export default function Privacy() {
 
   return (
     <Main>
-      <article className="pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+      <article className="pt-28 pb-16 px-6 md:px-8 max-w-2xl mx-auto">
+        <header className="mb-10">
+          <h1 className="text-3xl md:text-4xl font-normal tracking-tight mb-3">
             {t("title")}
           </h1>
-          <p className="text-primary-foreground/60 font-medium">
+          <p className="text-[var(--color-text-muted)] font-light">
             {t("lastUpdated")}
           </p>
         </header>
 
-        <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-primary-foreground/80 mb-8">{t("intro")}</p>
+        <div className="space-y-8">
+          <p className="text-lg font-light text-[var(--color-text-muted)] leading-relaxed">
+            {t("intro")}
+          </p>
 
           {/* Information We Collect */}
           <Section title={t("sections.collection.title")}>
@@ -59,21 +68,17 @@ export default function Privacy() {
           {/* Third-Party Services */}
           <Section title={t("sections.thirdParty.title")}>
             <p>{t("sections.thirdParty.content")}</p>
-            <div className="mt-4 space-y-4">
-              <div className="bg-primary-background-bright p-4 border-l-4 border-accent-solid">
-                <h4 className="font-bold">{t("sections.thirdParty.services.clerk.name")}</h4>
-                <p className="text-primary-foreground/70">
-                  {t("sections.thirdParty.services.clerk.description")}
-                </p>
-              </div>
-              <div className="bg-primary-background-bright p-4 border-l-4 border-accent-solid">
-                <h4 className="font-bold">{t("sections.thirdParty.services.supabase.name")}</h4>
-                <p className="text-primary-foreground/70">
-                  {t("sections.thirdParty.services.supabase.description")}
-                </p>
-              </div>
+            <div className="mt-4 space-y-3">
+              <InfoCard title={t("sections.thirdParty.services.clerk.name")}>
+                {t("sections.thirdParty.services.clerk.description")}
+              </InfoCard>
+              <InfoCard title={t("sections.thirdParty.services.supabase.name")}>
+                {t("sections.thirdParty.services.supabase.description")}
+              </InfoCard>
             </div>
-            <p className="mt-4 text-primary-foreground/70 italic">{t("sections.thirdParty.note")}</p>
+            <p className="mt-4 text-[var(--color-text-muted)] italic text-sm">
+              {t("sections.thirdParty.note")}
+            </p>
           </Section>
 
           {/* Data Sharing */}
@@ -102,30 +107,28 @@ export default function Privacy() {
           <Section title={t("sections.rights.title")}>
             <p>{t("sections.rights.content")}</p>
 
-            <div className="mt-6 space-y-6">
+            <div className="mt-6 space-y-4">
               {/* GDPR */}
-              <div className="bg-primary-background-bright p-6 border border-primary-border">
-                <h4 className="font-bold text-lg mb-4">{t("sections.rights.gdpr.title")}</h4>
-                <ul className="list-disc pl-6 space-y-2">
+              <InfoCard title={t("sections.rights.gdpr.title")}>
+                <ul className="list-disc pl-6 space-y-2 mt-2">
                   {(t("sections.rights.gdpr.items", { returnObjects: true }) as string[]).map(
                     (item, index) => (
                       <li key={index}>{item}</li>
                     )
                   )}
                 </ul>
-              </div>
+              </InfoCard>
 
               {/* CCPA */}
-              <div className="bg-primary-background-bright p-6 border border-primary-border">
-                <h4 className="font-bold text-lg mb-4">{t("sections.rights.ccpa.title")}</h4>
-                <ul className="list-disc pl-6 space-y-2">
+              <InfoCard title={t("sections.rights.ccpa.title")}>
+                <ul className="list-disc pl-6 space-y-2 mt-2">
                   {(t("sections.rights.ccpa.items", { returnObjects: true }) as string[]).map(
                     (item, index) => (
                       <li key={index}>{item}</li>
                     )
                   )}
                 </ul>
-              </div>
+              </InfoCard>
             </div>
           </Section>
 
@@ -142,13 +145,12 @@ export default function Privacy() {
           {/* Contact Us */}
           <Section title={t("sections.contact.title")}>
             <p>{t("sections.contact.content")}</p>
-            <a
-              href={`mailto:${t("sections.contact.email")}`}
-              className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-accent-solid text-white font-bold hover:bg-accent-solid-bright transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              {t("sections.contact.email")}
-            </a>
+            <Button asChild className="mt-4">
+              <a href={`mailto:${t("sections.contact.email")}`} className="gap-2">
+                <Mail className="w-4 h-4" strokeWidth={1.5} />
+                {t("sections.contact.email")}
+              </a>
+            </Button>
           </Section>
         </div>
       </article>
@@ -165,9 +167,34 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mb-10">
-      <h2 className="text-2xl font-bold mb-4 text-primary-foreground-bright">{title}</h2>
-      <div className="text-primary-foreground/80 space-y-4">{children}</div>
+    <section className="pb-6 border-b border-[var(--color-divider)] last:border-b-0">
+      <h2 className="text-xl font-normal mb-4">{title}</h2>
+      <div className="text-[var(--color-text-muted)] font-light space-y-3 leading-relaxed">
+        {children}
+      </div>
     </section>
+  );
+}
+
+function InfoCard({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className={cn(
+        "p-4 rounded-[1rem]",
+        "bg-[var(--color-divider)]",
+        "border border-[var(--color-border-light)]"
+      )}
+    >
+      <h4 className="font-normal text-base mb-1">{title}</h4>
+      <div className="text-[var(--color-text-muted)] font-light text-sm">
+        {children}
+      </div>
+    </div>
   );
 }
