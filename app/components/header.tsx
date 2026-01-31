@@ -28,8 +28,6 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { to: "/privacy", label: t("nav.privacy") },
-    { to: "/terms", label: t("nav.terms") },
     { to: "/support", label: t("nav.support") },
     { to: "/account", label: t("nav.account") },
   ];
