@@ -11,7 +11,7 @@ import {
   ShieldCheck,
   ShoppingCart,
   Activity,
-  RefreshCw,
+  Plug,
   ChevronDown,
 } from "lucide-react";
 
@@ -123,20 +123,11 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Row 1: Available features */}
             <FeatureCard
               icon={UtensilsCrossed}
               title={t("features.items.mealPlanning.title")}
               description={t("features.items.mealPlanning.description")}
-            />
-            <FeatureCard
-              icon={Package}
-              title={t("features.items.pantry.title")}
-              description={t("features.items.pantry.description")}
-            />
-            <FeatureCard
-              icon={ShieldCheck}
-              title={t("features.items.allergies.title")}
-              description={t("features.items.allergies.description")}
             />
             <FeatureCard
               icon={ShoppingCart}
@@ -144,14 +135,28 @@ export default function Home() {
               description={t("features.items.shopping.description")}
             />
             <FeatureCard
+              icon={ShieldCheck}
+              title={t("features.items.allergies.title")}
+              description={t("features.items.allergies.description")}
+            />
+            {/* Row 2: Coming Soon features */}
+            <FeatureCard
+              icon={Package}
+              title={t("features.items.pantry.title")}
+              description={t("features.items.pantry.description")}
+              comingSoon={t("features.comingSoon")}
+            />
+            <FeatureCard
               icon={Activity}
               title={t("features.items.nutrition.title")}
               description={t("features.items.nutrition.description")}
+              comingSoon={t("features.comingSoon")}
             />
             <FeatureCard
-              icon={RefreshCw}
-              title={t("features.items.sync.title")}
-              description={t("features.items.sync.description")}
+              icon={Plug}
+              title={t("features.items.mcpAccess.title")}
+              description={t("features.items.mcpAccess.description")}
+              comingSoon={t("features.comingSoon")}
             />
           </div>
         </div>
@@ -256,10 +261,12 @@ function FeatureCard({
   icon: Icon,
   title,
   description,
+  comingSoon,
 }: {
   icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
   title: string;
   description: string;
+  comingSoon?: string;
 }) {
   return (
     <Card interactive className="group">
@@ -280,7 +287,14 @@ function FeatureCard({
           />
         </div>
         {/* Title - size for hierarchy, not weight */}
-        <h3 className="text-lg font-normal mb-2">{title}</h3>
+        <div className="flex items-center gap-2 mb-2">
+          <h3 className="text-lg font-normal">{title}</h3>
+          {comingSoon && (
+            <span className="text-xs font-light text-[var(--color-text-muted)] border border-[var(--color-border)] rounded-full px-2 py-0.5">
+              {comingSoon}
+            </span>
+          )}
+        </div>
         <p className="text-base font-light text-[var(--color-text-muted)] leading-relaxed">
           {description}
         </p>
