@@ -1,10 +1,10 @@
 {
   "hero": {
-    "title": "Intelligente Essensplanung",
-    "titleAccent": "Einfach Gemacht",
-    "subtitle": "PanPlans hilft dir bei der Planung nahrhafter Mahlzeiten, der Verwaltung deiner Vorräte und der Reduzierung von Lebensmittelverschwendung – unter Berücksichtigung deiner Ernährungsbedürfnisse und Allergien.",
+    "title": "Zuhause kochen",
+    "titleAccent": "leicht gemacht",
+    "subtitle": "PanPlans lässt dich wieder Freude am Kochen haben – indem du dir keine Gedanken mehr darüber machen musst. Lass die App deine wöchentlichen Gerichte planen und die Einkaufsliste organisieren. Alles unter Berücksichtigung deiner Ernährungspräferenzen.",
     "cta": {
-      "appStore": "Im App Store laden",
+      "appStore": "Jetzt im App Store laden",
       "learnMore": "Mehr erfahren"
     }
   },
@@ -14,18 +14,18 @@
     "items": {
       "mealPlanning": {
         "title": "Intelligente Essensplanung",
-        "description": "Erhalte personalisierte Mahlzeitenvorschläge basierend auf deinen Vorlieben, Ernährungseinschränkungen und dem, was bereits in deiner Vorratskammer ist."
+        "description": "Erhalte personalisierte Rezepte basierend auf deinen Vorlieben und dem, was du bereits auf Vorrat hast."
       },
       "pantry": {
-        "title": "Vorratsverwaltung",
-        "description": "Verfolge deine Zutaten, überwache Ablaufdaten und lass nie wieder Lebensmittel verkommen."
+        "title": "Vorratsmanagement",
+        "description": "Überblicke deine Zutaten, sodass du kein Essen mehr wegwerfen musst."
       },
       "allergies": {
         "title": "Allergiesicher",
-        "description": "Lege deine Ernährungseinschränkungen und Allergien fest. PanPlans stellt sicher, dass jeder Rezeptvorschlag für dich sicher ist."
+        "description": "Lege deine Ernährungseinschränkungen und Allergien fest. PanPlans sorgt dafür, dass jeder Rezeptvorschlag für dich sicher ist."
       },
       "shopping": {
-        "title": "Intelligente Einkaufslisten",
+        "title": "Intelligente Einkaufsliste",
         "description": "Erstelle automatisch Einkaufslisten basierend auf deinen Essensplänen. Kaufe nur, was du brauchst."
       },
       "nutrition": {
@@ -41,7 +41,7 @@
   "appPreview": {
     "title": "Erlebe",
     "titleAccent": "PanPlans",
-    "description": "Eine wunderschön gestaltete App, die Essensplanung zur Freude macht, nicht zur Last."
+    "description": "Eine wunderschön und minimalistisch gestaltete App, die Essensplanung zur Freude macht."
   },
   "download": {
     "title": "Bereit loszulegen?",

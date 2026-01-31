@@ -1,8 +1,8 @@
 {
   "hero": {
-    "title": "Smart Meal Planning",
-    "titleAccent": "Made Simple",
-    "subtitle": "PanPlans helps you plan nutritious meals, manage your pantry, and reduce food waste - all while respecting your dietary needs and allergies.",
+    "title": "Homemade Meals",
+    "titleAccent": "Made Easy",
+    "subtitle": "PanPlans lets you have fun in the kitchen again by freeing your mental space. Let the app plan your weekly meals and organise your shopping list - all while respecting your dietary needs and preferences.",
     "cta": {
       "appStore": "Download on the App Store",
       "learnMore": "Learn More"
@@ -14,19 +14,19 @@
     "items": {
       "mealPlanning": {
         "title": "Smart Meal Planning",
-        "description": "Get personalized meal suggestions based on your preferences, dietary restrictions, and what's already in your pantry."
+        "description": "Get personalized meal recipes based on your preferences, dietary restrictions, and what's already in your pantry."
       },
       "pantry": {
         "title": "Pantry Management",
-        "description": "Track your ingredients, monitor expiration dates, and never let food go to waste again."
+        "description": "Track your ingredients and never let food go to waste again."
       },
       "allergies": {
         "title": "Allergy Safe",
         "description": "Set your dietary restrictions and allergies. PanPlans ensures every recipe suggestion is safe for you."
       },
       "shopping": {
-        "title": "Smart Shopping Lists",
-        "description": "Automatically generate shopping lists based on your meal plans. Buy only what you need."
+        "title": "Smart Shopping List",
+        "description": "Automatically generate shopping lists based on your weekly meal plans. Buy only what you need."
       },
       "nutrition": {
         "title": "Nutrition Tracking",
@@ -41,7 +41,7 @@
   "appPreview": {
     "title": "Experience",
     "titleAccent": "PanPlans",
-    "description": "A beautifully designed app that makes meal planning a joy, not a chore."
+    "description": "A beautifully and minimalistic designed app that makes meal planning a joy."
   },
   "download": {
     "title": "Ready to Get Started?",
