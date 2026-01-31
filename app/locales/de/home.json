@@ -11,30 +11,31 @@
   "features": {
     "title": "Warum",
     "titleAccent": "PanPlans",
+    "comingSoon": "demnächst",
     "items": {
       "mealPlanning": {
         "title": "Intelligente Essensplanung",
         "description": "Erhalte personalisierte Rezepte basierend auf deinen Vorlieben und dem, was du bereits auf Vorrat hast."
       },
-      "pantry": {
-        "title": "Vorratsmanagement",
-        "description": "Überblicke deine Zutaten, sodass du kein Essen mehr wegwerfen musst."
+      "shopping": {
+        "title": "Intelligente Einkaufsliste",
+        "description": "Erstelle automatisch Einkaufslisten basierend auf deinen Essensplänen. Kaufe nur, was du brauchst."
       },
       "allergies": {
         "title": "Allergiesicher",
         "description": "Lege deine Ernährungseinschränkungen und Allergien fest. PanPlans sorgt dafür, dass jeder Rezeptvorschlag für dich sicher ist."
       },
-      "shopping": {
-        "title": "Intelligente Einkaufsliste",
-        "description": "Erstelle automatisch Einkaufslisten basierend auf deinen Essensplänen. Kaufe nur, was du brauchst."
+      "pantry": {
+        "title": "Vorratsmanagement",
+        "description": "Überblicke deine Zutaten, sodass du kein Essen mehr wegwerfen musst."
       },
       "nutrition": {
         "title": "Nährwert-Tracking",
         "description": "Behalte den Überblick über deine Nährstoffaufnahme mit detaillierten Aufschlüsselungen für jede Mahlzeit."
       },
-      "sync": {
-        "title": "Geräteübergreifende Synchronisierung",
-        "description": "Greife auf deine Essenspläne, Vorräte und Einkaufslisten von jedem Gerät aus zu, überall."
+      "mcpAccess": {
+        "title": "MCP-Zugang",
+        "description": "Verbinde PanPlans mit deinem KI-Assistenten für eine nahtlose Integration der Essensplanung."
       }
     }
   },

@@ -11,30 +11,31 @@
   "features": {
     "title": "Why Choose",
     "titleAccent": "PanPlans",
+    "comingSoon": "coming soon",
     "items": {
       "mealPlanning": {
         "title": "Smart Meal Planning",
         "description": "Get personalized meal recipes based on your preferences, dietary restrictions, and what's already in your pantry."
       },
-      "pantry": {
-        "title": "Pantry Management",
-        "description": "Track your ingredients and never let food go to waste again."
+      "shopping": {
+        "title": "Smart Shopping List",
+        "description": "Automatically generate shopping lists based on your weekly meal plans. Buy only what you need."
       },
       "allergies": {
         "title": "Allergy Safe",
         "description": "Set your dietary restrictions and allergies. PanPlans ensures every recipe suggestion is safe for you."
       },
-      "shopping": {
-        "title": "Smart Shopping List",
-        "description": "Automatically generate shopping lists based on your weekly meal plans. Buy only what you need."
+      "pantry": {
+        "title": "Pantry Management",
+        "description": "Track your ingredients and never let food go to waste again."
       },
       "nutrition": {
         "title": "Nutrition Tracking",
         "description": "Keep track of your nutritional intake with detailed breakdowns for every meal."
       },
-      "sync": {
-        "title": "Cross-Device Sync",
-        "description": "Access your meal plans, pantry, and shopping lists from any device, anywhere."
+      "mcpAccess": {
+        "title": "MCP Access",
+        "description": "Connect PanPlans to your AI assistant for seamless meal planning integration."
       }
     }
   },
