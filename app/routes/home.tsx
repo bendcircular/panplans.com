@@ -269,7 +269,13 @@ function FeatureCard({
   comingSoon?: string;
 }) {
   return (
-    <Card interactive className="group">
+    <Card interactive className="group relative">
+      {/* Coming Soon badge - top right corner */}
+      {comingSoon && (
+        <span className="absolute top-4 right-4 text-xs font-light text-[var(--color-text-muted)] border border-[var(--color-border)] rounded-full px-2 py-0.5">
+          {comingSoon}
+        </span>
+      )}
       <CardContent className="pt-6">
         {/* Icon - monochrome, no colorful backgrounds */}
         <div
@@ -287,14 +293,7 @@ function FeatureCard({
           />
         </div>
         {/* Title - size for hierarchy, not weight */}
-        <div className="flex items-center gap-2 mb-2">
-          <h3 className="text-lg font-normal">{title}</h3>
-          {comingSoon && (
-            <span className="text-xs font-light text-[var(--color-text-muted)] border border-[var(--color-border)] rounded-full px-2 py-0.5">
-              {comingSoon}
-            </span>
-          )}
-        </div>
+        <h3 className="text-lg font-normal mb-2">{title}</h3>
         <p className="text-base font-light text-[var(--color-text-muted)] leading-relaxed">
           {description}
         </p>
